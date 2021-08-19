@@ -1,0 +1,14 @@
+:root {
+  --apple-green: #7ed321;
+  --baby-purple: #e990f9;
+  --white: #eaeaea;
+  --white-two: #fff;
+  --greyish: #b0abab;
+  --menu-text-mobile: #464347;
+  --filter-box-text: #747474;
+
+  --nav-bar-size: 116px;
+  @media screen and (max-width: 600px) {
+    --nav-bar-size: 77pt;
+  }
+}

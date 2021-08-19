@@ -1,0 +1,121 @@
+.nav-bar {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: var(--apple-green);
+  height: var(--nav-bar-size);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: 0.2s;
+
+  .menu {
+    height: var(--nav-bar-size);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.open {
+    background-color: var(--white-two);
+    height: 100vh;
+  }
+}
+
+.logo {
+  margin-left: 37px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  @media screen and (max-width: 600px) {
+    margin-left: 25pt;
+    width: 98pt;
+    height: 37pt;
+  }
+}
+
+.control-buttons-box {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin text {
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+
+  p {
+    @include text;
+    padding-bottom: 4px;
+    margin: 6px 46px 0 0;
+    font-size: 14px;
+    color: var(--white-two);
+    border-bottom: 2px solid transparent;
+    transition: 0.2s border-bottom;
+
+    &:hover {
+      border-bottom: 2px solid var(--white-two);
+    }
+
+    &.open {
+      border-bottom: 2px solid var(--white-two);
+    }
+  }
+}
+
+.filter {
+  margin: 39px;
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.menu-button {
+  margin-right: 25pt;
+}
+
+.menu-buttons-box {
+  height: calc(100% - (2 * 116px));
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .menu-buttons {
+    overflow: hidden;
+
+    p {
+      @include text;
+      font-size: 24pt;
+      margin: 33pt;
+      color: var(--menu-text-mobile);
+
+      &.open {
+        color: var(--apple-green);
+      }
+    }
+  }
+}

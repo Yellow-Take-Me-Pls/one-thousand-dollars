@@ -1,0 +1,18 @@
+.add {
+  position: fixed;
+  z-index: 1;
+  background: url("./img/add.svg");
+  background-size: 100%;
+  width: 60px;
+  height: 60px;
+  right: 40px;
+  bottom: 40px;
+  cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    width: 47pt;
+    height: 47pt;
+    right: 30pt;
+    bottom: 30pt;
+  }
+}
