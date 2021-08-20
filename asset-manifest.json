@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "./static/css/main.6829742d.chunk.css",
+    "main.js": "./static/js/main.fb1f82ed.chunk.js",
+    "main.js.map": "./static/js/main.fb1f82ed.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.dbd48217.js",
+    "runtime-main.js.map": "./static/js/runtime-main.dbd48217.js.map",
+    "static/css/2.ecdd39c8.chunk.css": "./static/css/2.ecdd39c8.chunk.css",
+    "static/js/2.1cc6dc7e.chunk.js": "./static/js/2.1cc6dc7e.chunk.js",
+    "static/js/2.1cc6dc7e.chunk.js.map": "./static/js/2.1cc6dc7e.chunk.js.map",
+    "static/js/3.7166b7de.chunk.js": "./static/js/3.7166b7de.chunk.js",
+    "static/js/3.7166b7de.chunk.js.map": "./static/js/3.7166b7de.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.ecdd39c8.chunk.css.map": "./static/css/2.ecdd39c8.chunk.css.map",
+    "static/css/main.6829742d.chunk.css.map": "./static/css/main.6829742d.chunk.css.map",
+    "static/js/2.1cc6dc7e.chunk.js.LICENSE.txt": "./static/js/2.1cc6dc7e.chunk.js.LICENSE.txt",
+    "static/media/jogsBox.module.scss": "./static/media/add.dd83b0cc.svg",
+    "static/media/loginBox.module.scss": "./static/media/pink-bear.65f32a0e.png",
+    "static/media/changeBox.module.scss": "./static/media/cancel.05cda373.svg",
+    "static/media/jogInfoBox.module.scss": "./static/media/jog.da5644d5.svg",
+    "static/media/emptyJogsBox.module.scss": "./static/media/sad-smile.10e3ee7f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dbd48217.js",
+    "static/css/2.ecdd39c8.chunk.css",
+    "static/js/2.1cc6dc7e.chunk.js",
+    "static/css/main.6829742d.chunk.css",
+    "static/js/main.fb1f82ed.chunk.js"
+  ]
+}
