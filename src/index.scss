@@ -1,3 +1,12 @@
+
+@font-face {font-family: "SF UI Text";
+  src: url("./fonts/SFUIText/5ad142d0e49ca868b1530c30a47c625f.eot"); 
+  src: url("./fonts/SFUIText/5ad142d0e49ca868b1530c30a47c625fiefix.eot") format("embedded-opentype"), 
+  url("./fonts/SFUIText/5ad142d0e49ca868b1530c30a47c625f.woff2") format("woff2"), 
+  url("./fonts/SFUIText/5ad142d0e49ca868b1530c30a47c625f.woff") format("woff"), 
+  url("./fonts/SFUIText/5ad142d0e49ca868b1530c30a47c625f.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   margin-top: var(--nav-bar-size);
