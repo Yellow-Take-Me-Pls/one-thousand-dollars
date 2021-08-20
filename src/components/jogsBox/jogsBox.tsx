@@ -62,7 +62,7 @@ export function JogsBox() {
   return (
     <>
       <FilterBox />
-      {filtredJogs.length > 0 && (
+      {jogs && jogs.length > 0 && (
         <NavLink to="/jogs/add">
           <div className={classes.add}></div>
         </NavLink>
@@ -91,7 +91,7 @@ export function JogsBox() {
           </NavLink>
         ))}
 
-        {filtredJogs.length === 0 && <EmptyJogsBox />}
+        {(!jogs || jogs.length === 0) && <EmptyJogsBox />}
       </div>
     </>
   );
