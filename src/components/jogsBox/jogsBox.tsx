@@ -82,9 +82,11 @@ export function JogsBox() {
               date={moment(element.date * 1000).format("DD.MM.YYYY")}
               distance={`${element.distance} km`}
               time={`${element.time} min`}
-              speed={`${Math.floor(
-                element.distance / (element.time / 60)
-              )} kmh`}
+              speed={`${
+                Math.abs(element.time) > 0.00001
+                  ? Math.floor(element.distance / (element.time / 60))
+                  : 0
+              } kmh`}
             />
           </NavLink>
         ))}
