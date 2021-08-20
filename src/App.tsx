@@ -8,7 +8,7 @@ import { JogsBox } from "./components/jogsBox";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import { ChangeBox } from "./components/changeBox";
 import { ChangeBoxType } from "./types/changeBoxType";
-import { InfoBox } from "./components/infoBox";
+import { InfoBox } from "./components/infoBox/infoBox";
 import { ContactUsBox } from "./components/contactUsBox/contactUsBox";
 
 export default function App() {

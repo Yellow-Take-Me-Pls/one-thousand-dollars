@@ -1,1 +1,1 @@
-export * from "./infoBox";
+export * from "./contactUsBox";
