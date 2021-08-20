@@ -1,13 +1,12 @@
 import classes from "./filterBox.module.scss";
-import DatePicker from "react-datepicker";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Context } from "../../../../context";
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export function FilterBox() {
-  let [startDate, setStartDate] = useState(null);
-  let [endDate, setEndDate] = useState(null);
-  let { isOpenFilter } = useContext(Context);
+  let { isOpenFilter, startDate, setStartDate, endDate, setEndDate } =
+    useContext(Context);
 
   return (
     <>

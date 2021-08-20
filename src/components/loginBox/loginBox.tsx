@@ -5,25 +5,26 @@ import { Context } from "../../context";
 import { useContext } from "react";
 
 export function LoginBox() {
-  let { setAccessToken } = useContext(Context);
+  let { setAccessToken, setJugs } = useContext(Context);
 
   function setToken() {
-    fetch("https://jogtracker.herokuapp.com/api/v1/auth/uuidLogin", {
-      body: "uuid=hello",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      method: "POST",
-    })
-      .then((response) => {
-        return response.json();
+    try {
+      fetch("https://jogtracker.herokuapp.com/api/v1/auth/uuidLogin", {
+        body: "uuid=hello",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        method: "POST",
       })
-      .then((data) => {
-        window.location.replace("/jogs");
-        localStorage.setItem("access_token", JSON.stringify(data.response));
-        setAccessToken(data.response);
-      });
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          localStorage.setItem("access_token", JSON.stringify(data.response));
+          setAccessToken(data.response);
+        });
+    } catch {}
   }
 
   return (

@@ -3,7 +3,8 @@ import { useContext } from "react";
 import { Context } from "../../../../context";
 
 export function Filter({ className }: { className: string }) {
-  let { isOpenFilter, setIsOpenFilter } = useContext(Context);
+  let { isOpenFilter, setIsOpenFilter, setStartDate, setEndDate } =
+    useContext(Context);
 
   return (
     <svg
@@ -15,6 +16,10 @@ export function Filter({ className }: { className: string }) {
       className={className}
       onClick={() => {
         setIsOpenFilter(!isOpenFilter);
+        if (isOpenFilter) {
+          setStartDate(null);
+          setEndDate(null);
+        }
       }}
     >
       <g
