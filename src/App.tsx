@@ -2,7 +2,7 @@ import "./App.scss";
 import "./styles/variables.scss";
 import { NavBar } from "./components/navBar";
 import { LoginBox } from "./components/loginBox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Context } from "./context";
 import { JogsBox } from "./components/jogsBox";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
@@ -46,9 +46,11 @@ export default function App() {
       <BrowserRouter>
         <NavBar />
         {!accessToken && <Redirect to="/" />}
-        {accessToken && window.location.pathname.length <= 1 && (
-          <Redirect to="/jogs" />
-        )}
+        {accessToken &&
+          (window.location.pathname.length <= 1 ||
+            window.location.pathname === "/one-thousand-dollars/") && (
+            <Redirect to="/jogs" />
+          )}
         <Route exact path="/" component={LoginBox} />
         <Route exact path="/jogs" component={JogsBox} />
         <Route exact path="/info" component={InfoBox} />
