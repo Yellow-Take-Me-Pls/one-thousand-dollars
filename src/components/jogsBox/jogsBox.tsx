@@ -8,6 +8,7 @@ import { Context } from "../../context";
 import { useContext, useEffect } from "react";
 import { Jog } from "../../types/jog";
 import moment from "moment";
+import { EmptyJogsBox } from "./components/emptyJogsBox";
 
 export function JogsBox() {
   let {
@@ -42,26 +43,30 @@ export function JogsBox() {
     } catch {}
   }, []);
 
-  const filtredJogs: Jog[] = jogs?.filter((element: Jog) => {
-    const current = new Date(element.date * 1000);
-    const start = new Date(startDate);
-    const end = new Date(endDate);
+  const filtredJogs: Jog[] = jogs
+    ? jogs.filter((element: Jog) => {
+        const current = new Date(element.date * 1000);
+        const start = new Date(startDate);
+        const end = new Date(endDate);
 
-    if (startDate) {
-      if (endDate) return current >= start && current <= end;
-      return current >= start;
-    }
-    if (endDate) return current <= end;
+        if (startDate) {
+          if (endDate) return current >= start && current <= end;
+          return current >= start;
+        }
+        if (endDate) return current <= end;
 
-    return true;
-  });
+        return true;
+      })
+    : [];
 
   return (
     <>
       <FilterBox />
-      <NavLink to="/jogs/add">
-        <div className={classes.add}></div>
-      </NavLink>
+      {filtredJogs.length > 0 && (
+        <NavLink to="/jogs/add">
+          <div className={classes.add}></div>
+        </NavLink>
+      )}
       {!jogs && (
         <div className={classes.loader}>
           <Loader />
@@ -83,6 +88,8 @@ export function JogsBox() {
             />
           </NavLink>
         ))}
+
+        {filtredJogs.length === 0 && <EmptyJogsBox />}
       </div>
     </>
   );
