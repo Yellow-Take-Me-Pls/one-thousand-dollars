@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .nav-bar {
   position: fixed;
   z-index: 3;
@@ -28,7 +32,6 @@
 
 .logo {
   margin-left: 37px;
-  cursor: pointer;
   transition: 0.5s;
 
   @media screen and (max-width: 600px) {
